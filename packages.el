@@ -48,3 +48,17 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+
+;; In your packages.el
+;; (package! auto-dark)
+
+
+;; ============================================
+;; Custom
+;; use ```pwh
+;;      ~/.emacs.d/bin/doom refresh
+;;'''
+;; install package
+;; ============================================
+(package! org-super-agenda)
+(package! evil-tutor)

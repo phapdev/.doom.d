@@ -12,6 +12,7 @@
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
+(set-fontset-font t 'unicode "FontAwesome" nil 'prepend)
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
 ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
@@ -32,8 +33,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
-
+(setq doom-theme 'doom-moonlight)
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -74,3 +74,30 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+
+;; ====================================================
+;; phapdev custom
+;; ====================================================
+;; auto dark!
+
+;; org-super
+;; (def-package! org-super-agenda
+;;   :after org-agenda
+;;   :init
+;;   (setq org-super-agenda-group '((:name "Today"
+;;                                   :time-grid t
+;;                                   :scheduled today)
+;;                                  (:name "Due today"
+;;                                   :deadline today)
+;;                                  (:name "Impotant"
+;;                                   :priority "A")
+;;                                  (:name "Overdue"
+;;                                   :deadline past)
+;;                                  (:name "Due soon"
+;;                                   :deadline future)
+;;                                  (:name "Big Oucomes"
+;;                                         :tag "bo")))
+;;   :config
+;;   (org-super-agenda-mode)
+;;   )
